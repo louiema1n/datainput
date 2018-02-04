@@ -4,12 +4,14 @@
         "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
 <generatorConfiguration>
 
-    <context id="MysqlTables" targetRuntime="MyBatis3Simple">
+    <context id="MysqlTables" targetRuntime="MyBatis3Simple" defaultModelType="flat">
 
         <!-- 通用mapper插件 -->
         <plugin type="tk.mybatis.mapper.generator.MapperPlugin">
             <!-- 此处的 MyMapper注意一定不能被扫描到-->
-            <property name="mappers" value="com.lm.datainput.utils.MyMapper"/>
+            <!--<property name="mappers" value="com.lm.datainput.utils.MyMapper"/>-->
+            <!-- 不生成MyMapper -->
+            <property name="mappers" value="tk.mybatis.mapper.common.Mapper"/>
         </plugin>
 
         <commentGenerator>

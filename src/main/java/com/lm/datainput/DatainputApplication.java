@@ -1,11 +1,11 @@
 package com.lm.datainput;
 
-import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import tk.mybatis.spring.annotation.MapperScan;
 
 @SpringBootApplication
-@MapperScan("com.lm.datainput.mapper")
+@MapperScan(basePackages = "com.lm.datainput.mapper")
 public class DatainputApplication {
 
 	public static void main(String[] args) {

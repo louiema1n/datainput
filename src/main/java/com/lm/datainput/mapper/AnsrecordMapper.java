@@ -1,7 +1,7 @@
 package com.lm.datainput.mapper;
 
 import com.lm.datainput.domain.Ansrecord;
-import com.lm.datainput.utils.MyMapper;
+import tk.mybatis.mapper.common.Mapper;
 
-public interface AnsrecordMapper extends MyMapper<Ansrecord> {
+public interface AnsrecordMapper extends Mapper<Ansrecord> {
 }

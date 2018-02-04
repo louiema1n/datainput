@@ -1,30 +1,26 @@
+#数据源
 spring:
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
     username: root
     password: root
     url: jdbc:mysql://localhost:3306/datainput?useSSL=true
-# thymeleaf
-  thymeleaf:
-    cache: false
-    encoding: utf-8
-    prefix: classpath:/templates/
-    mode: HTML
-    content-type: text/html
 
-# mybatis-通用mqpper-pagehelper
+#mybatis
 mybatis:
   type-aliases-package: com.lm.datainput.domain
   mapper-locations: classpath:mapper/*.xml
-#
+
+#mapper
+#mappers 多个接口时逗号隔开
 mapper:
-  mappers: com.lm.datainput.utils.MyMapper
+  mappers: tk.mybatis.mapper.common.Mapper
+#  mappers: com.lm.datainput.utils.MyMapper
   not-empty: false
   identity: MYSQL
 
-#pagehelper:
-#    helperDialect: mysql
-#    reasonable: true
-#    supportMethodsArguments: true
-#    params: count=countSql
+# 显示sql语句
+logging:
+  level:
+    com.lm.datainput.mapper: debug
 
